@@ -11,6 +11,10 @@ body {
   background-color: black;
 
 }
+
+@font-face { font-family: irene-CAPS-thin; src: url('irene-CAPS-thin.ttf'); } 
+ @font-face { font-family: irene-CAPS-thin; font-weight: bold; src: url('irene-CAPS-thin.ttf');}
+
 html {
   width: 100%;
   height: 100%;
@@ -22,7 +26,7 @@ h5,
 h6 {
   margin: 0 0 35px;
   text-transform: uppercase;
-  font-family: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "irene-CAPS-thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   position: relative;
@@ -39,6 +43,11 @@ h2{
   position: relative;
   bottom: 70px;
 }
+
+.about-section{
+	background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+}
+
 p {
   margin: 0 0 25px;
   font-size: 18px;
@@ -70,7 +79,7 @@ a:focus {
 }
 .navbar-custom {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
   text-transform: uppercase;
   font-family: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: black;
@@ -130,9 +139,10 @@ a:focus {
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.3);
   }
 }
+
 .intro {
   display: table;
   width: 100%;
@@ -236,6 +246,7 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
+
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -257,12 +268,9 @@ a:focus {
     padding-top: 250px;
   }
   .download-section {
-    padding: 100px 0;
+    padding: 150px 0;
   }
-  #map {
-    height: 400px;
-    margin-top: 250px;
-  }
+ 
 }
 .btn {
   text-transform: uppercase;
@@ -274,16 +282,16 @@ a:focus {
   border-radius: 0;
 }
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
-  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid white;
   outline: none;
   color: black;
-  background-color: #42DCA3;
+  background-color: white;
 }
 ul.banner-social-buttons {
   margin-top: 0;
