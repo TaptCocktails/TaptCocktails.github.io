@@ -19,12 +19,28 @@ html {
   width: 100%;
   height: 100%;
 }
-h1,
-h3,
-h4,
-h5,
-h6 {
+h1{
+  font-size:400px;
+  margin: 0 0 85px;
+  text-transform: uppercase;
+  font-family: "irene-CAPS-thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 20px;
+}
+
+h3{
   margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: "Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 70px;
+
+}
+h4{
+  margin: 0 0 85px;
   text-transform: uppercase;
   font-family: "irene-CAPS-thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -44,13 +60,20 @@ h2{
   bottom: 70px;
 }
 
-.about-section{
-	background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+#about{
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+	background: url(../img/image.jpg);
+  position:relative;
 }
 
 p {
   margin: 0 0 25px;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1.5;
   position: relative;
   bottom: 80px;
@@ -59,7 +82,7 @@ p {
 @media (min-width: 768px) {
   p {
     margin: 0 0 35px;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.6;
   }
 }
@@ -162,10 +185,10 @@ a:focus {
   vertical-align: middle;
 }
 .intro .intro-body .brand-heading {
-  font-size: 40px;
+  font-size: 90px;
 }
 .intro .intro-body .intro-text {
-  font-size: 18px;
+  font-size: 25px;
 }
 @media (min-width: 768px) {
   .intro {
@@ -173,10 +196,13 @@ a:focus {
     padding: 0;
   }
   .intro .intro-body .brand-heading {
-    font-size: 100px;
+    font-size: 125px;
   }
   .intro .intro-body .intro-text {
-    font-size: 26px;
+    font-size: 30px;
+  }
+  #about{
+    height:1000%;
   }
 }
 .btn-circle {
