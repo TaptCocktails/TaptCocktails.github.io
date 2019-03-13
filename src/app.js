@@ -24,6 +24,8 @@ search.addWidget(
         <article>
           <h1>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h1>
           <p>{{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}</p>
+          <a target="_blank" href="{{#helpers.highlight}}{ "attribute": "link" }{{/helpers.highlight}}"> Open </a>
+
 
         </article>
       `,
