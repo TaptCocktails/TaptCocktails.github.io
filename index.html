@@ -1,38 +1,740 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<!-- This site was created in Webflow. http://www.webflow.com -->
+<!-- Last Published: Mon Feb 03 2020 20:26:22 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="product-startup-template.webflow.io" data-wf-page="5dc2d72c1464762982b09436" data-wf-site="5d820ccf1097dd2dccadc680">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="shortcut icon" href="./favicon.png">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
-  <link rel="stylesheet" href="./src/index.css">
-  <link rel="stylesheet" href="./src/app.css">
-
+    <meta charset="utf-8" />
+    <title>WellBrew</title>
+    <meta content="Big, colorful design that keeps the focus on your products. Designed to scale startups into successful online stores. Great for small inventories." name="description" />
+    <meta content="Home #1 • Productos – Webflow Ecommerce website template" property="og:title" />
+    <meta content="Big, colorful design that keeps the focus on your products. Designed to scale startups into successful online stores. Great for small inventories." property="og:description" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Merriweather:300,300italic,400,400italic,700,700italic,900,900italic", "Big Shoulders Display:100,300,regular,500,600,700,800,900", "Big Shoulders Text:100,300,regular,500,600,700,800,900", "DM Sans:regular,italic,500,500italic,700,700italic"]
+            }
+        });
+    </script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2cae3212d93535a6e7df12_fav-32.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2cae35d2e0671543aa3422_fav-256.png" rel="apple-touch-icon" />
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+    <script type="text/javascript">
+        window.__WEBFLOW_CURRENCY_SETTINGS = {
+            "currencyCode": "USD",
+            "$init": true,
+            "symbol": "$",
+            "decimal": ".",
+            "fractionDigits": 2,
+            "group": ",",
+            "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}",
+            "hideDecimalForWholeNumbers": false
+        };
+    </script>
 </head>
 
-<body>
-  
 
-  <div class="container">
-    <div class="search-panel">
-      <div class="search-panel__results">
-        <div id="searchbox"></div>
-        <div id="hits"></div>
-      </div>
+
+<body>
+    <div style="opacity:0" class="main">
+        <div class="big-slider-arrow-right"></div>
+        <div class="big-slider-arrow-left"></div>
+        <div data-collapse="all" data-animation="default" data-duration="0" class="navbar w-nav">
+            <div data-w-id="3b445b17-99f4-c7e3-422a-f41760213811" class="cart-absolute">
+                <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="rightSidebar" data-wf-cart-query="
+  query FetchCartInfo {
+    site {
+      commerce {
+        quickCheckoutEnabled
+        defaultCurrency
+        defaultCountry
+        businessAddress {
+          country
+        }
+      }
+    }
+    database {
+      commerceOrder {
+        id
+        startedOn
+        updatedOn
+        comment
+        userItemsCount
+        userItems {
+          id count rowTotal { value } sku { id f__draft_0ht f__archived_0ht f_main_image_4dr { url alt file { origFileName width height size variants { origFileName quality height width s3Url size error } } } f_price_ { value unit } f_sku_values_3dr {value { id } property { id }} } product { f_name_ id f__draft_0ht f__archived_0ht f_sku_properties_3dr { id name enum { id name slug } } }
+        }
+        extraItems {
+          pluginName
+          pluginId
+          name
+          price {
+            value
+            unit
+            string
+          }
+        }
+        total {
+          value
+          unit
+          string
+        }
+        subtotal {
+          value
+          unit
+          string
+        }
+        statusFlags {
+              requiresShipping
+              hasDownloads
+            }
+      }
+    }
+  }
+" data-wf-page-link-href-prefix="" data-wf-cart-easing="ease" data-wf-cart-duration="500" class="w-commerce-commercecartwrapper absolute-center">
+                    <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink hamburger-btn w-inline-block">
+                        <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItemsCount%22%7D%7D%5D"
+                            class="w-commerce-commercecartopenlinkcount cart-quantity">0</div>
+                        <div class="hamburger-lines"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d87847c8de89cd7fb9de138_Orion_shopping-basket.svg" alt="" class="icn-16" /></div>
+                    </a>
+                    <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar">
+                        <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
+                            <div class="w-commerce-commercecartheader">
+                                <h4 class="w-commerce-commercecartheading">Your Cart</h4><a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink w-inline-block"><svg width="16px" height="16px" viewBox="0 0 16 16"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill-rule="nonzero" fill="#333333"><polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon></g></g></svg></a></div>
+                            <div
+                                class="w-commerce-commercecartformwrapper">
+                                <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+                                    <script type="text/x-wf-template" id="wf-template-db40d943-821c-78f2-ed77-ba9d221baf84">%3Cdiv%20class%3D%22w-commerce-commercecartitem%20cart-item%22%3E%3Cimg%20data-wf-bindings%3D%22%255B%257B%2522src%2522%253A%257B%2522type%2522%253A%2522ImageRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_main_image_4dr%2522%257D%257D%255D%22%20src%3D%22%22%20alt%3D%22%22%20class%3D%22w-commerce-commercecartitemimage%20w-dyn-bind-empty%22%2F%3E%3Cdiv%20class%3D%22w-commerce-commercecartiteminfo%22%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_name_%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartproductname%20w-dyn-bind-empty%22%3E%3C%2Fdiv%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePrice%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522price%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_price_%2522%257D%257D%255D%22%3E%24%C2%A00.00%C2%A0USD%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fx-wf-template%22%20id%3D%22wf-template-db40d943-821c-78f2-ed77-ba9d221baf8a%22%3E%253Cli%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522PlainText%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D.name%252522%25257D%25257D%25255D%2522%253E%253C%252Fspan%253E%253Cspan%253E%253A%2520%253C%252Fspan%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522CommercePropValues%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D%252522%25257D%25257D%25255D%2522%253E%253C%252Fspan%253E%253C%252Fli%253E%3C%2Fscript%3E%3Cul%20data-wf-bindings%3D%22%255B%257B%2522optionSets%2522%253A%257B%2522type%2522%253A%2522CommercePropTable%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%5B%5D%2522%257D%257D%252C%257B%2522optionValues%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_sku_values_3dr%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartoptionlist%22%20data-wf-collection%3D%22database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%22%20data-wf-template-id%3D%22wf-template-db40d943-821c-78f2-ed77-ba9d221baf8a%22%3E%3Cli%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%3E%3C%2Fspan%3E%3C%2Fli%3E%3C%2Ful%3E%3Ca%20href%3D%22%23%22%20data-wf-bindings%3D%22%255B%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20class%3D%22w-inline-block%22%20data-wf-cart-action%3D%22remove-item%22%20data-commerce-sku-id%3D%22%22%3E%3Cdiv%3ERemove%3C%2Fdiv%3E%3C%2Fa%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22text%22%20required%3D%22%22%20pattern%3D%22%5B0-9%5D%2B%22%20data-wf-bindings%3D%22%255B%257B%2522value%2522%253A%257B%2522type%2522%253A%2522Number%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522numberPrecision%2522%252C%2522params%2522%253A%255B%25220%2522%252C%2522numberPrecision%2522%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.count%2522%257D%257D%252C%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartquantity%22%20name%3D%22quantity%22%20min%3D%220%22%20data-wf-cart-action%3D%22update-item-quantity%22%20data-commerce-sku-id%3D%22%22%20value%3D%221%22%2F%3E%3C%2Fdiv%3E</script>
+                                    <div
+                                        class="w-commerce-commercecartlist" data-wf-collection="database.commerceOrder.userItems" data-wf-template-id="wf-template-db40d943-821c-78f2-ed77-ba9d221baf84">
+                                        <div class="w-commerce-commercecartitem cart-item"><img data-wf-bindings="%5B%7B%22src%22%3A%7B%22type%22%3A%22ImageRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_main_image_4dr%22%7D%7D%5D"
+                                                src="" alt="" class="w-commerce-commercecartitemimage w-dyn-bind-empty" />
+                                            <div class="w-commerce-commercecartiteminfo">
+                                                <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_name_%22%7D%7D%5D"
+                                                    class="w-commerce-commercecartproductname w-dyn-bind-empty"></div>
+                                                <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_price_%22%7D%7D%5D">$ 0.00 USD</div>
+                                                <script type="text/x-wf-template" id="wf-template-db40d943-821c-78f2-ed77-ba9d221baf8a">%3Cli%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%3E%3C%2Fspan%3E%3C%2Fli%3E</script>
+                                                <ul
+                                                    data-wf-bindings="%5B%7B%22optionSets%22%3A%7B%22type%22%3A%22CommercePropTable%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr[]%22%7D%7D%2C%7B%22optionValues%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_sku_values_3dr%22%7D%7D%5D"
+                                                    class="w-commerce-commercecartoptionlist" data-wf-collection="database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr" data-wf-template-id="wf-template-db40d943-821c-78f2-ed77-ba9d221baf8a">
+                                                    <li><span data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D.name%22%7D%7D%5D"></span><span>: </span>
+                                                        <span
+                                                            data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D%22%7D%7D%5D"></span>
+                                                    </li>
+                                                    </ul>
+                                                    <a href="#" data-wf-bindings="%5B%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
+                                                        class="w-inline-block" data-wf-cart-action="remove-item" data-commerce-sku-id="">
+                                                        <div>Remove</div>
+                                                    </a>
+                                            </div><input type="text" required="" pattern="[0-9]+" data-wf-bindings="%5B%7B%22value%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.count%22%7D%7D%2C%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
+                                                class="w-commerce-commercecartquantity" name="quantity" min="0" data-wf-cart-action="update-item-quantity" data-commerce-sku-id="" value="1" /></div>
+                        </div>
+                        <div class="w-commerce-commercecartfooter cart-footer">
+                            <div class="w-commerce-commercecartlineitem">
+                                <div>Subtotal</div>
+                                <div data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.subtotal%22%7D%7D%5D"
+                                    class="w-commerce-commercecartordervalue"></div>
+                            </div>
+                            <div>
+                                <div data-wf-paypal-button="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;color&quot;:&quot;black&quot;,&quot;shape&quot;:&quot;rect&quot;,&quot;label&quot;:&quot;paypal&quot;,&quot;tagline&quot;:false}"></div>
+                                <div data-node-type="commerce-cart-quick-checkout-actions" style="display:none">
+                                    <a data-node-type="commerce-cart-apple-pay-button" style="background-image:-webkit-named-image(apple-pay-logo-white);background-size:100% 50%;background-position:50% 50%;background-repeat:no-repeat" class="w-commerce-commercecartapplepaybutton apple-pay-button">
+                                        <div></div>
+                                    </a><a data-node-type="commerce-cart-quick-checkout-button" style="display:none" class="w-commerce-commercecartquickcheckoutbutton"><svg class="w-commerce-commercequickcheckoutgoogleicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><polygon id="google-mark-a" points="0 .329 3.494 .329 3.494 7.649 0 7.649"></polygon><polygon id="google-mark-c" points=".894 0 13.169 0 13.169 6.443 .894 6.443"></polygon></defs><g fill="none" fill-rule="evenodd"><path fill="#4285F4" d="M10.5967,12.0469 L10.5967,14.0649 L13.1167,14.0649 C14.6047,12.6759 15.4577,10.6209 15.4577,8.1779 C15.4577,7.6339 15.4137,7.0889 15.3257,6.5559 L7.8887,6.5559 L7.8887,9.6329 L12.1507,9.6329 C11.9767,10.6119 11.4147,11.4899 10.5967,12.0469"></path><path fill="#34A853" d="M7.8887,16 C10.0137,16 11.8107,15.289 13.1147,14.067 C13.1147,14.066 13.1157,14.065 13.1167,14.064 L10.5967,12.047 C10.5877,12.053 10.5807,12.061 10.5727,12.067 C9.8607,12.556 8.9507,12.833 7.8887,12.833 C5.8577,12.833 4.1387,11.457 3.4937,9.605 L0.8747,9.605 L0.8747,11.648 C2.2197,14.319 4.9287,16 7.8887,16"></path><g transform="translate(0 4)"><mask id="google-mark-b" fill="#fff"><use xlink:href="#google-mark-a"></use></mask><path fill="#FBBC04" d="M3.4639,5.5337 C3.1369,4.5477 3.1359,3.4727 3.4609,2.4757 L3.4639,2.4777 C3.4679,2.4657 3.4749,2.4547 3.4789,2.4427 L3.4939,0.3287 L0.8939,0.3287 C0.8799,0.3577 0.8599,0.3827 0.8459,0.4117 C-0.2821,2.6667 -0.2821,5.3337 0.8459,7.5887 L0.8459,7.5997 C0.8549,7.6167 0.8659,7.6317 0.8749,7.6487 L3.4939,5.6057 C3.4849,5.5807 3.4729,5.5587 3.4639,5.5337" mask="url(#google-mark-b)"></path></g><mask id="google-mark-d" fill="#fff"><use xlink:href="#google-mark-c"></use></mask><path fill="#EA4335" d="M0.894,4.3291 L3.478,6.4431 C4.113,4.5611 5.843,3.1671 7.889,3.1671 C9.018,3.1451 10.102,3.5781 10.912,4.3671 L13.169,2.0781 C11.733,0.7231 9.85,-0.0219 7.889,0.0001 C4.941,0.0001 2.245,1.6791 0.894,4.3291" mask="url(#google-mark-d)"></path></g></svg><svg class="w-commerce-commercequickcheckoutmicrosofticon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><polygon fill="#F05022" points="7 7 1 7 1 1 7 1"></polygon><polygon fill="#7DB902" points="15 7 9 7 9 1 15 1"></polygon><polygon fill="#00A4EE" points="7 15 1 15 1 9 7 9"></polygon><polygon fill="#FFB700" points="15 15 9 15 9 9 15 9"></polygon></g></svg><div>Pay with browser.</div></a></div>
+                                <a
+                                    href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton apple-pay-button" data-loading-text="Hang Tight...">Continue to Checkout</a>
+                            </div>
+                        </div>
+                        </form>
+                        <div class="w-commerce-commercecartemptystate empty-state"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85ef3882aa6e5dc3a85e6f_empty-cart.svg" alt="empty-cart" class="icn-160 margin-paragraph_2x" />
+                            <div class="display-2">Your cart is empty</div>
+                            <a data-w-id="c499b190-f44c-467b-9f96-eb4062de4531" href="/shop" class="link-block-invert w-inline-block">
+                                <div class="display-2">Shop now</div>
+                                <div class="hover-line"></div>
+                            </a>
+                        </div>
+                        <div style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate">
+                            <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-general-error="Something went wrong when adding this item to the cart."
+                                data-w-cart-cart_order_min-error="Cart failed.">Due to high demand, we are currently out of stock.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav role="navigation" class="navigation w-nav-menu">
+        <div class="shape-bottom-white"></div>
+        <div class="shape-bottom-dark"></div>
+        <div class="breadcrumb-navi">
+            <div>© 2019 All Rights Reserved by </div>
+            <a data-w-id="98638208-ab0f-97d9-22b8-e898516f5641" href="https://webflow.com/templates/designers/fouroom" target="_blank" class="link-block-invert inline w-inline-block">
+                <div class="underline">Fouroom.co</div>
+                <div class="hover-line"></div>
+            </a>
+        </div>
+        <div class="w-layout-grid grid-navigation">
+            <div class="navi-menu">
+                <div class="align-left">
+                    <div class="overflow-hidden">
+                        <div class="show-if-navi padding-right-24">
+                            <a href="https://product-startup-template.webflow.io/#home-pages" class="text-wrap w-inline-block">
+                                <h1 class="effect-1">Home</h1>
+                                <h1 class="effect-1 hover">Home</h1>
+                            </a>
+                            <div class="sup-absolute">01</div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div class="show-if-navi padding-right-24">
+                            <a href="/shop" class="text-wrap w-inline-block">
+                                <h1 class="effect-1">Products</h1>
+                                <h1 class="effect-1 hover">Products</h1>
+                            </a>
+                            <div class="sup-absolute">02</div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div class="show-if-navi padding-right-24">
+                            <a href="https://product-startup-template.webflow.io/#about-pages" class="text-wrap w-inline-block">
+                                <h1 class="effect-1">About Us</h1>
+                                <h1 class="effect-1 hover">About us</h1>
+                            </a>
+                            <div class="sup-absolute">03</div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div class="show-if-navi padding-right-24">
+                            <a href="https://product-startup-template.webflow.io/#journal-pages" class="text-wrap w-inline-block">
+                                <h1 class="effect-1">Journal</h1>
+                                <h1 class="effect-1 hover">Journal</h1>
+                            </a>
+                            <div class="sup-absolute">04</div>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div class="show-if-navi padding-right-24">
+                            <a href="https://product-startup-template.webflow.io/#contact-pages" class="text-wrap w-inline-block">
+                                <h1 class="effect-1">Contact</h1>
+                                <h1 class="effect-1 hover">Contact</h1>
+                            </a>
+                            <div class="sup-absolute">05</div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="w-list-unstyled">
+                    <li>
+                        <div class="overflow-hidden">
+                            <div class="show-if-navi">
+                                <a data-w-id="98638208-ab0f-97d9-22b8-e898516f5670" href="https://product-startup-template.webflow.io/#faq-pages" class="link-block-invert w-inline-block">
+                                    <div class="underline">FAQ</div>
+                                    <div class="hover-line"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="overflow-hidden">
+                            <div class="show-if-navi">
+                                <a data-w-id="f1c91690-3a1b-6887-bed9-ce4ad4eb14c7" href="/utility/reviews" class="link-block-invert w-inline-block">
+                                    <div class="underline">Reviews</div>
+                                    <div class="hover-line"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="overflow-hidden">
+                            <div class="show-if-navi">
+                                <div class="overflow-hidden">
+                                    <a data-w-id="98638208-ab0f-97d9-22b8-e898516f5690" href="/utility/terms-and-conditions" class="link-block-invert w-inline-block">
+                                        <div class="underline">Terms and Conditions<br/></div>
+                                        <div class="hover-line"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navi-follow">
+                <div class="overflow-hidden margin-paragraph_2x no-margin-mobile">
+                    <div class="show-if-navi">
+                        <div class="caption uppercase">Follow us</div>
+                    </div>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="show-if-navi padding">
+                        <a data-w-id="98638208-ab0f-97d9-22b8-e898516f569b" href="https://www.instagram.com/" target="_blank" class="btn social w-inline-block">
+                            <div class="btn-hover black"></div>
+                            <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="btn-label icon" /></a>
+                    </div>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="show-if-navi padding">
+                        <a data-w-id="e32ba9c2-bee8-8ca9-a63d-cff335f64a5f" href="https://www.instagram.com/" target="_blank" class="btn social w-inline-block">
+                            <div class="btn-hover black"></div>
+                            <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e204f0c5f301657e6091_facebook-white.svg" alt="" class="btn-label icon" /></a>
+                    </div>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="show-if-navi padding">
+                        <a data-w-id="e8df9b5e-7a30-bc2c-42d2-0419f3908080" href="https://www.instagram.com/" target="_blank" class="btn social w-inline-block">
+                            <div class="btn-hover black"></div>
+                            <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e227f0c5f3d1c67e60e4_twitter-white.svg" alt="" class="btn-label icon" /></a>
+                    </div>
+                </div>
+                <div class="line-left-navi"></div>
+            </div>
+            <div class="content centered overflow-hidden display-none-tablet">
+                <div class="line-left-navi"></div>
+                <div class="instagram-wrapper">
+                    <div class="overflow-hidden margin-paragraph_2x">
+                        <div class="show-if-navi"><a href="https://www.instagram.com/" target="_blank" class="trigger insta w-inline-block"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e286bc83a68325fe189b150_dose-juice-KNU61gmh3fE-unsplash.jpg" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e286bc83a68325fe189b150_dose-juice-KNU61gmh3fE-unsplash-p-800.jpeg 800w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e286bc83a68325fe189b150_dose-juice-KNU61gmh3fE-unsplash-p-1080.jpeg 1080w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e286bc83a68325fe189b150_dose-juice-KNU61gmh3fE-unsplash.jpg 1600w" sizes="100vw" alt=""/><div class="layer-instagram"><div class="instagram-content"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32 margin-paragraph"/><div>@productos</div></div></div><div class="insta-hover"></div></a></div>
+                    </div>
+                    <div class="overflow-hidden margin-paragraph_2x">
+                        <div class="show-if-navi"><a href="https://www.instagram.com/" target="_blank" class="trigger insta w-inline-block"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e286c2a3a6832021589b2b9_dose-juice-kdXXgdRulnI-unsplash.jpg" alt=""/><div class="layer-instagram"><div class="instagram-content"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32 margin-paragraph"/><div>@productos</div></div></div><div class="insta-hover"></div></a></div>
+                    </div>
+                    <div class="overflow-hidden margin-paragraph_2x">
+                        <div class="show-if-navi"><a href="https://www.instagram.com/" target="_blank" class="trigger insta w-inline-block"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2867f28f1044c377f8d35b_dose-juice-gjaQ7RnVIkM-unsplash.jpg" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2867f28f1044c377f8d35b_dose-juice-gjaQ7RnVIkM-unsplash-p-800.jpeg 800w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2867f28f1044c377f8d35b_dose-juice-gjaQ7RnVIkM-unsplash-p-1080.jpeg 1080w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2867f28f1044c377f8d35b_dose-juice-gjaQ7RnVIkM-unsplash.jpg 1600w" sizes="100vw" alt=""/><div class="layer-instagram"><div class="instagram-content"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32 margin-paragraph"/><div>@productos</div></div></div><div class="insta-hover"></div></a></div>
+                    </div>
+                    <div class="overflow-hidden margin-paragraph_2x">
+                        <div class="show-if-navi"><a href="https://www.instagram.com/" target="_blank" class="trigger insta w-inline-block"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868110bfeadb1557b283e_dose-juice-L16qQYtnfGE-unsplash.jpg" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868110bfeadb1557b283e_dose-juice-L16qQYtnfGE-unsplash-p-500.jpeg 500w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868110bfeadb1557b283e_dose-juice-L16qQYtnfGE-unsplash-p-800.jpeg 800w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868110bfeadb1557b283e_dose-juice-L16qQYtnfGE-unsplash-p-1080.jpeg 1080w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868110bfeadb1557b283e_dose-juice-L16qQYtnfGE-unsplash.jpg 1600w" sizes="100vw" alt=""/><div class="layer-instagram"><div class="instagram-content"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32 margin-paragraph"/><div>@productos</div></div></div><div class="insta-hover"></div></a></div>
+                    </div>
+                    <div class="overflow-hidden margin-paragraph_2x">
+                        <div class="show-if-navi"><a href="https://www.instagram.com/" target="_blank" class="trigger insta w-inline-block"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868043a6832075b898a1a_dose-juice-PuoE_Bp5B6k-unsplash.jpg" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868043a6832075b898a1a_dose-juice-PuoE_Bp5B6k-unsplash-p-800.jpeg 800w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868043a6832075b898a1a_dose-juice-PuoE_Bp5B6k-unsplash-p-1080.jpeg 1080w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2868043a6832075b898a1a_dose-juice-PuoE_Bp5B6k-unsplash.jpg 1600w" sizes="100vw" alt=""/><div class="layer-instagram"><div class="instagram-content"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32 margin-paragraph"/><div>@productos</div></div></div><div class="insta-hover"></div></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><a href="/" class="brand black absolute w-nav-brand"></a>
+
+
+    <div class="hamburger w-nav-button">
+        <div class="absolute-center">
+            <div class="hamburger-btn">
+                <div class="hamburger-lines">
+                    <div class="close-top"></div>
+                    <div class="close-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-bg"></div>
+    </div>
+    <div class="section-hero-full">
+        <div data-delay="4000" data-animation="slide" class="slider width-100 w-slider" data-autoplay="1" data-easing="ease-in-out-quart" data-hide-arrows="1" data-autoplay-limit="2" data-duration="2000" data-infinite="1">
+            <div class="mask-hero w-slider-mask">
+              <div data-w-id="c3bff72c-1aab-9f51-760a-1f667ed917fb" class="slide-smooth w-slide">
+                  <div class="collection-list-wrapper w-dyn-list">
+                      <div class="collection-list w-dyn-items">
+                          <div class="collection-item w-dyn-item">
+                              <div class="w-layout-grid grid-12x8 height-100">
+                                  <div id="w-node-1f667ed917fd-82b09436" class="content centered">
+                                      <div class="hero-title">
+                                          <h2 class="display-0 margin-paragraph_2x">WellBrew</h2>
+                                          <div class="container small">
+                                              <div class="content centered">
+                                                  <div class="introduction">Masterfully blended real tea with antioxidants for every mood.</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div><img id="w-node-9550f7bbc0a2-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                      alt="" sizes="(max-width: 700px) 87vw, (max-width: 1000px) 46vw, (max-width: 2000px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                      class="img-product-smooth-left shift-left" />
+                                  <div id="w-node-805884d39ce7-82b09436" class="content-button-centered">
+                                      <a data-w-id="b66bd9e3-b97f-3991-c683-805884d39cf0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                          href="peach.html" class="btn w-inline-block">
+                                          <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                              class="btn-label">View product</div>
+                                          <div class="btn-hover black"></div>
+                                          <div style="background-color:hsla(14.361702127659573, 100.00%, 63.14%, 1.00)" class="bg-color dark-orange"></div>
+                                      </a>
+                                  </div><img id="w-node-1f667ed91809-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw" srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png 800w"
+                                      class="img-slide-smooth-neg" /><img id="w-node-2bb32b9ecb6e-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw"
+                                      srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png 800w"
+                                      class="img-slide-smooth-pos z-1" /></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <!-- <div data-w-id="c3bff72c-1aab-9f51-760a-1f667ed917fb" class="slide-smooth w-slide">
+                    <div class="collection-list-wrapper w-dyn-list">
+                        <div class="collection-list w-dyn-items">
+                            <div class="collection-item w-dyn-item">
+                                <div class="w-layout-grid grid-12x8 height-100">
+                                    <div id="w-node-1f667ed917fd-82b09436" class="content centered">
+                                        <div class="hero-title">
+                                            <h2 class="display-0 margin-paragraph_2x">Detox</h2>
+                                            <div class="container small">
+                                                <div class="content centered">
+                                                    <div class="introduction">Grapefruit, Ginger, Hibiscus Tea, Dandelion, Cinnamon.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img id="w-node-9550f7bbc0a2-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        alt="" sizes="(max-width: 700px) 87vw, (max-width: 1000px) 46vw, (max-width: 2000px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        class="img-product-smooth-left shift-left" />
+                                    <div id="w-node-805884d39ce7-82b09436" class="content-button-centered">
+                                        <a data-w-id="b66bd9e3-b97f-3991-c683-805884d39cf0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            href="peach.html" class="btn w-inline-block">
+                                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="btn-label">View product</div>
+                                            <div class="btn-hover black"></div>
+                                            <div style="background-color:hsla(14.361702127659573, 100.00%, 63.14%, 1.00)" class="bg-color dark-orange"></div>
+                                        </a>
+                                    </div><img id="w-node-1f667ed91809-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw" srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png 800w"
+                                        class="img-slide-smooth-neg" /><img id="w-node-2bb32b9ecb6e-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw"
+                                        srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png 800w"
+                                        class="img-slide-smooth-pos z-1" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-w-id="c3bff72c-1aab-9f51-760a-1f667ed9180a" class="slide-smooth w-slide">
+                    <div class="collection-list-wrapper w-dyn-list">
+                        <div class="collection-list w-dyn-items">
+                            <div class="collection-item w-dyn-item">
+                                <div class="w-layout-grid grid-12x8 height-100">
+                                    <div id="w-node-2996b0f00ac1-82b09436" class="content centered">
+                                        <div class="hero-title">
+                                            <h2 class="display-0 margin-paragraph_2x">De-stress</h2>
+                                            <div class="container small">
+                                                <div class="content centered">
+                                                    <div class="introduction">Peach, Rosemary, Green Tea, Lemon Balm, Holy Basil. </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img id="w-node-2996b0f00acf-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 46vw, (max-width: 991px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 500w, https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 612w"
+                                        class="img-product-smooth-right shift-left" />
+                                    <div id="w-node-2996b0f00ac9-82b09436" class="content-button-centered">
+                                        <a data-w-id="2d75f358-241c-b7ac-94c0-2996b0f00aca" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            href="/product/key-lime" class="btn w-inline-block">
+                                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="btn-label">View product</div>
+                                            <div class="btn-hover black"></div>
+                                            <div style="background-color:hsla(87.96116504854368, 50.24%, 59.80%, 1.00)" class="bg-color dark-brown"></div>
+                                        </a>
+                                    </div><img id="w-node-2996b0f00ad0-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2c7a39a4857976f2c3b_lime.svg" alt="" class="img-slide-smooth-neg" /><img id="w-node-2996b0f00ad1-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2c4a711b1675fb5129e_limete.png"
+                                        alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw" srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2c4a711b1675fb5129e_limete-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2c4a711b1675fb5129e_limete.png 512w"
+                                        class="img-slide-smooth-pos z-1" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-w-id="bb135dc7-b1f3-199c-751c-5b9b464b51b6" class="slide-smooth w-slide">
+                    <div class="collection-list-wrapper w-dyn-list">
+                        <div class="collection-list w-dyn-items">
+                            <div class="collection-item w-dyn-item">
+                                <div class="w-layout-grid grid-12x8 height-100">
+                                    <div id="w-node-3e81ae1410cb-82b09436" class="content centered">
+                                        <div class="hero-title">
+                                            <h2 class="display-0 margin-paragraph_2x">Energy</h2>
+                                            <div class="container small">
+                                                <div class="content centered">
+                                                    <div class="introduction">Ginseng, Lime, Yerba Mate, Lemongrass, Natural Golden Honey</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img id="w-node-3e81ae1410d9-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 46vw, (max-width: 991px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 500w, https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 612w"
+                                        class="img-product-smooth-right shift-left" />
+                                    <div id="w-node-3e81ae1410d3-82b09436" class="content-button-centered">
+                                        <a data-w-id="7bf512aa-6939-9519-c46a-3e81ae1410d4" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            href="/product/coconut" class="btn w-inline-block">
+                                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="btn-label">View product</div>
+                                            <div class="btn-hover black"></div>
+                                            <div style="background-color:hsla(15.714285714285715, 17.50%, 47.06%, 1.00)" class="bg-color dark-green"></div>
+                                        </a>
+                                    </div><img id="w-node-3e81ae1410da-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2d6a39a48c1ef6f2e93_fruit-5.png" alt="" class="img-slide-smooth-pos z-1" /><img id="w-node-3e81ae1410db-82b09436"
+                                        src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2d911bed5c49169466e_fruit-6.png" alt="" class="img-slide-smooth-neg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-w-id="bb135dc7-b1f3-199c-751c-5b9b464b51b6" class="slide-smooth w-slide">
+                    <div class="collection-list-wrapper w-dyn-list">
+                        <div class="collection-list w-dyn-items">
+                            <div class="collection-item w-dyn-item">
+                                <div class="w-layout-grid grid-12x8 height-100">
+                                    <div id="w-node-3e81ae1410cb-82b09436" class="content centered">
+                                        <div class="hero-title">
+                                            <h2 class="display-0 margin-paragraph_2x">Immunity</h2>
+                                            <div class="container small">
+                                                <div class="content centered">
+                                                    <div class="introduction">Honey, Lemon, Rooibos, Elderberry, Echinacea Root, Turmeric.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img id="w-node-3e81ae1410d9-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 46vw, (max-width: 991px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 500w, https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png 612w"
+                                        class="img-product-smooth-right shift-left" />
+                                    <div id="w-node-3e81ae1410d3-82b09436" class="content-button-centered">
+                                        <a data-w-id="7bf512aa-6939-9519-c46a-3e81ae1410d4" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            href="/product/coconut" class="btn w-inline-block">
+                                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="btn-label">View product</div>
+                                            <div class="btn-hover black"></div>
+                                            <div style="background-color:hsla(15.714285714285715, 17.50%, 47.06%, 1.00)" class="bg-color dark-green"></div>
+                                        </a>
+                                    </div><img id="w-node-3e81ae1410da-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2d6a39a48c1ef6f2e93_fruit-5.png" alt="" class="img-slide-smooth-pos z-1" /><img id="w-node-3e81ae1410db-82b09436"
+                                        src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88e2d911bed5c49169466e_fruit-6.png" alt="" class="img-slide-smooth-neg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div data-w-id="c3bff72c-1aab-9f51-760a-1f667ed917fb" class="slide-smooth w-slide">
+                    <div class="collection-list-wrapper w-dyn-list">
+                        <div class="collection-list w-dyn-items">
+                            <div class="collection-item w-dyn-item">
+                                <div class="w-layout-grid grid-12x8 height-100">
+                                    <div id="w-node-1f667ed917fd-82b09436" class="content centered">
+                                        <div class="hero-title">
+                                            <h2 class="display-0 margin-paragraph_2x">Beauty</h2>
+                                            <div class="container small">
+                                                <div class="content centered">
+                                                    <div class="introduction">Rose, Blueberry, Schisandra Berry, Licorice Root, Nettle Leaf.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img id="w-node-9550f7bbc0a2-82b09436" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" src="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        alt="" sizes="(max-width: 700px) 87vw, (max-width: 1000px) 46vw, (max-width: 2000px) 90vw, 75vw" srcset="https://24lmue3703sc0ka01x5jncyc-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/BottleLineupBottles_14oz-MOCKUP_2020Labels-OldBottle-LUV.png"
+                                        class="img-product-smooth-left shift-left" />
+                                    <div id="w-node-805884d39ce7-82b09436" class="content-button-centered">
+                                        <a data-w-id="b66bd9e3-b97f-3991-c683-805884d39cf0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            href="peach.html" class="btn w-inline-block">
+                                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="btn-label">View product</div>
+                                            <div class="btn-hover black"></div>
+                                            <div style="background-color:hsla(14.361702127659573, 100.00%, 63.14%, 1.00)" class="bg-color dark-orange"></div>
+                                        </a>
+                                    </div><img id="w-node-1f667ed91809-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw" srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8d6249f213cee30a048_fruits-1.png 800w"
+                                        class="img-slide-smooth-neg" /><img id="w-node-2bb32b9ecb6e-82b09436" src="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 75vw"
+                                        srcset="https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3-p-500.png 500w, https://assets.website-files.com/5d85edd208e53eed3ae194a2/5d88d8dba711b1893fb47cff_fruits-3.png 800w"
+                                        class="img-slide-smooth-pos z-1" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="arrow-hero left w-slider-arrow-left"></div>
+            <div class="arrow-hero right w-slider-arrow-right"></div>
+            <div class="slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
+        </div>
+    </div>
+    <div class="section-content_middle detail">
+
+            <div class="title align-center show-if-in-view">What is WellBreW?</div>
+            <div class="w-layout-grid grid-column-rounded">
+                <div class="card-green show-if-in-view"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d8240fdd06ccc780fa240d0_fruits-1.png" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d8240fdd06ccc780fa240d0_fruits-1-p-500.png 500w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d8240fdd06ccc780fa240d0_fruits-1.png 800w"
+                        sizes="(max-width: 479px) 42vw, (max-width: 767px) 31vw, (max-width: 991px) 55vw, 57vw" alt="" class="icon-about" />
+                    <div>Masterfully blended real tea with antioxidants to reach desired benefits.</div>
+                </div>
+                <div class="card-green show-if-in-view"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d821b43a9e7564d2ceb3998_limete.png" srcset="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d821b43a9e7564d2ceb3998_limete-p-500.png 500w, https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d821b43a9e7564d2ceb3998_limete.png 512w"
+                        sizes="(max-width: 479px) 42vw, (max-width: 767px) 31vw, (max-width: 991px) 55vw, 57vw" alt="" class="icon-about" />
+                    <div>Imported ingredients from across the world, tested for performance for centuries.</div>
+                </div>
+                <div class="card-green show-if-in-view"><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d821b43a9e756fc2feb3995_fruit-5.png" alt="" class="icon-about" />
+                    <div>Refreshing, Lightly sweetened, nothing artificial, vegan.</div>
+                </div>
+            </div>
+
+        <!-- <div class="section-content">
+            <div class="title align-center show-if-in-view">Journal</div>
+            <div class="collection-list-wrapper show-if-in-view w-dyn-list">
+                <div class="cl-2x-big w-dyn-items">
+                    <div class="collection-item-horiz w-dyn-item">
+                        <a data-w-id="aa17c147-a60c-0fd8-edf0-e3b992e12394" href="/blog-post/miki-agrawal" class="trigger w-inline-block">
+                            <div class="img-wrapper small">
+                                <div style="background-image:url(&quot;https://assets.website-files.com/5d85edd208e53eed3ae194a2/5dea6bb3db032a32d3f5cc5e_gemma-chua-tran-xh2wGLVYLzo-unsplash.jpg&quot;)" class="bg-image"></div>
+                            </div>
+                            <div class="img-description-in">
+                                <div class="caption uppercase">Press</div>
+                                <div class="blog-post-title">Miki Agrawal</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="collection-item-horiz w-dyn-item">
+                        <a data-w-id="aa17c147-a60c-0fd8-edf0-e3b992e12394" href="/blog-post/mental-hygiene-and-meditation-a-conversation-with-emily-fletcher" class="trigger w-inline-block">
+                            <div class="img-wrapper small">
+                                <div style="background-image:url(&quot;https://assets.website-files.com/5d85edd208e53eed3ae194a2/5dea6e80519095f60f2b49ba_gemma-chua-tran-q747wDQi5Gk-unsplash.jpg&quot;)" class="bg-image"></div>
+                            </div>
+                            <div class="img-description-in">
+                                <div class="caption uppercase">News</div>
+                                <div class="blog-post-title">Mental Hygiene and Meditation</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="footer-double-section">
+        <div class="footer-left-section">
+            <div class="display-footer-2">Keep in touch and receive fun updates!<br/></div>
+            <div class="form-block w-form">
+                <form id="email-form" name="email-form" data-name="Email Form">
+                    <div class="text-field-holder"><input type="email" class="text-field-grey-rounded w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email here ..." id="email-2" required="" /><input type="submit" value="Sign up" data-wait="Please wait..."
+                            class="button-submit-absolute w-button" /></div>
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+            <div class="social-icons-holder">
+                <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa4e" href="https://www.instagram.com/fouroom.co/" target="_blank" class="btn-social w-inline-block">
+                    <div class="btn-hover black"></div>
+                    <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="btn-label icon" /></a>
+                <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa52" href="https://www.instagram.com/fouroom.co/"
+                    target="_blank" class="btn-social w-inline-block">
+                    <div class="btn-hover black"></div>
+                    <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e204f0c5f301657e6091_facebook-white.svg" alt="" class="btn-label icon" /></a>
+                <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa56" href="https://www.instagram.com/fouroom.co/"
+                    target="_blank" class="btn-social w-inline-block">
+                    <div class="btn-hover black"></div>
+                    <div class="bg-color dark-red"></div><img src="https://assets.website-files.com/5d820ccf1097dd2dccadc680/5d85e227f0c5f3d1c67e60e4_twitter-white.svg" alt="" class="btn-label icon" /></a>
+            </div>
+            <h5 class="display-3 margin-paragraph">Customer Support Center</h5>
+            <div>Monday – Friday<br/>9am – 5pm PST<br/>hello@template.com<br/>(080) 0123-45678</div>
+        </div>
+        <div class="footer-right-section">
+            <div class="footer-right-section-top">
+                <ul class="list-footer-column w-list-unstyled">
+                    <li>
+                        <div class="display-footer-2">Company<br/></div>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa6c" href="https://product-startup-template.webflow.io/#home-pages" class="link-block-invert w-inline-block">
+                            <div class="underline">Home</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa71" href="https://product-startup-template.webflow.io/#about-pages" class="link-block-invert w-inline-block">
+                            <div class="underline">About Yus</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa76" href="https://product-startup-template.webflow.io/#journal-pages" class="link-block-invert w-inline-block">
+                            <div class="underline">Journal</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa7b" href="/utility/reviews" class="link-block-invert w-inline-block">
+                            <div class="underline">Reviews</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa80" href="https://product-startup-template.webflow.io/#contact-pages" class="link-block-invert w-inline-block">
+                            <div class="underline">Contact</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-footer-column w-list-unstyled">
+                    <li>
+                        <div class="display-footer-2">Customer Care<br/></div>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa8f" href="/utility/terms-and-conditions" class="link-block-invert w-inline-block">
+                            <div class="underline">Terms and Conditions</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa94" href="https://product-startup-template.webflow.io/#faq-pages" class="link-block-invert w-inline-block">
+                            <div class="underline">FAQ</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-w-id="fb9e9fac-ec8f-bcc1-bcc1-c59873e0c728" href="/template/changelog" class="link-block-invert w-inline-block">
+                            <div class="underline">Changelog</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/template/licensing" class="link-block-invert w-inline-block">
+                            <div class="underline">Image license info</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/template/styleguide" class="link-block-invert w-inline-block">
+                            <div class="underline">Style guide</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/template/instructions" class="link-block-invert w-inline-block">
+                            <div class="underline">Instructions</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <ul class="list-footer-column w-list-unstyled">
+                    <li>
+                        <div class="display-footer-2">Shop<br/></div>
+                    </li>
+                    <li>
+                        <a data-w-id="13d3ba23-0667-75d5-1c8d-d84446a9aa9e" href="/shop" class="link-block-invert w-inline-block">
+                            <div class="underline">Shop all</div>
+                            <div class="hover-line"></div>
+                        </a>
+                    </li>
+                    <li class="list-item-no-padding">
+                        <div class="w-dyn-list">
+                            <div class="w-dyn-items">
+                                <div class="ci-list-item w-dyn-item">
+                                    <a href="/category/yogurt" class="link-block-invert w-inline-block">
+                                        <div class="underline">Yogurt</div>
+                                        <div class="hover-line"></div>
+                                    </a>
+                                </div>
+                                <div class="ci-list-item w-dyn-item">
+                                    <a href="/category/lactose-free" class="link-block-invert w-inline-block">
+                                        <div class="underline">Lactose•free</div>
+                                        <div class="hover-line"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+            </div>
+
+        </div>
     </div>
 
-    <div id="pagination"></div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.1.1"></script>
-  <script src="./src/app.js"></script>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5d820ccf1097dd2dccadc680" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 
 </html>
